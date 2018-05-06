@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.a123.shiyan2.UC4">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:padding="3dip"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <!-- 第1个TableLayout，用于描述表中的列属性。第0列可伸展，第1列可收缩 ，第2列被隐藏-->
+        <TableLayout
+            android:id="@+id/table1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:collapseColumns="1"
+            android:padding="3dip"
+            android:shrinkColumns="1"
+            android:stretchColumns="0">
+
+            <TableRow>
+
+                <Button android:text="该列可伸展" />
+
+            </TableRow>
+
+            <TableRow>
+
+            </TableRow>
+
+        </TableLayout>
+
+        <!-- 第2个TableLayout，用于描述表中单元格的属性，包括：android:layout_column 及android:layout_span-->
+        <TableLayout
+            android:id="@+id/table2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="3dip">
+
+            <TableRow>
+
+                <Button
+                    android:layout_weight="1"
+                    android:text="第0列" />
+
+                <Button
+                    android:layout_weight="1"
+                    android:text="第1列" />
+
+            </TableRow>
+
+        </TableLayout>
+
+        <!-- 第3个TableLayout，使用可伸展特性布局-->
+        <TableLayout
+            android:id="@+id/table3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="3dip"
+            android:stretchColumns="*">
+
+            <TableRow>
+
+                <Button android:text="一"></Button>
+
+                <TextView />
+
+                <TextView />
+            </TableRow>
+        </TableLayout>
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TableRow>
+
+                <Button android:text="返回" />
+            </TableRow>
+        </TableLayout>
+
+        <!-- 第4个TableLayout，使用可伸展特性，并指定每个控件宽度一致，如1dip-->
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
